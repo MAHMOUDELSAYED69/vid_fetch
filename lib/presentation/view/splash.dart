@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vid_fetch/utils/constants/images.dart';
-import 'package:vid_fetch/utils/constants/routes.dart';
-import 'package:vid_fetch/utils/extentions/extentions.dart';
+import 'package:vid_fetch/core/utils/constants/images.dart';
+import 'package:vid_fetch/core/utils/constants/routes.dart';
+import 'package:vid_fetch/core/utils/extension/extension.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});

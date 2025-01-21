@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vid_fetch/router/app_router.dart';
-import 'package:vid_fetch/utils/constants/routes.dart';
-import 'package:vid_fetch/utils/themes/app_themes.dart';
+import 'package:vid_fetch/core/router/app_router.dart';
+import 'package:vid_fetch/core/utils/constants/routes.dart';
+import 'package:vid_fetch/core/utils/themes/app_themes.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

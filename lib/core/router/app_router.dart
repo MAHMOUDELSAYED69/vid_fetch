@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:vid_fetch/router/page_transition.dart';
-import 'package:vid_fetch/view/screens/home.dart';
+import 'package:vid_fetch/core/router/page_transition.dart';
 
+import '../../presentation/view/home.dart';
+import '../../presentation/view/splash.dart';
 import '../utils/constants/routes.dart';
-import '../view/screens/splash.dart';
 
-abstract class AppRouter {
-  AppRouter._();
+class AppRouter {
+  const AppRouter._();
 
   static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
     switch (settings.name) {

@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vid_fetch/utils/constants/images.dart';
-import 'package:vid_fetch/utils/extentions/extentions.dart';
+import 'package:vid_fetch/core/utils/constants/images.dart';
+import 'package:vid_fetch/core/utils/extension/extension.dart';
 
-import '../../viewmodel/download_provider.dart';
-import '../widgets/custom_button.dart';
-import '../widgets/custom_text_field.dart';
+import '../viewmodel/download_provider.dart';
+import '../../core/widgets/custom_button.dart';
+import '../../core/widgets/custom_text_field.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

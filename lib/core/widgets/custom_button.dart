@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:loading_indicator/loading_indicator.dart';
-import 'package:vid_fetch/utils/constants/colors.dart';
-import 'package:vid_fetch/utils/extentions/extentions.dart';
+import 'package:vid_fetch/core/utils/constants/colors.dart';
+import 'package:vid_fetch/core/utils/extension/extension.dart';
 
 class MyElevatedButton extends StatelessWidget {
   const MyElevatedButton({

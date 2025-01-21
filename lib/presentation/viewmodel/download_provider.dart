@@ -1,5 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import '../service/download_service.dart';
+import '../../core/service/download_service.dart';
 
 final downloadStateProvider =
     StateNotifierProvider<DownloadStateNotifier, DownloadState>(
@@ -40,7 +40,7 @@ class DownloadStateNotifier extends StateNotifier<DownloadState> {
   Future<void> downloadVideo(String url) async {
     state = state.copyWith(
         isVideoDownloading: true, message: "Downloading Video File...");
-    final result = await VideoDownloadService().downloadVideo(url);
+    final result = await DownloadService().downloadVideo(url);
     state = state.copyWith(isDownloadDone: true, message: result);
     state = state.copyWith(isVideoDownloading: false);
     await Future.delayed(
@@ -52,7 +52,7 @@ class DownloadStateNotifier extends StateNotifier<DownloadState> {
   Future<void> downloadAudio(String url) async {
     state = state.copyWith(
         isAudioDownloading: true, message: "Downloading Audio File...");
-    final result = await VideoDownloadService().downloadAudio(url);
+    final result = await DownloadService().downloadAudio(url);
     state = state.copyWith(isDownloadDone: true, message: result);
     state = state.copyWith(isAudioDownloading: false);
     await Future.delayed(

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:vid_fetch/utils/constants/fonts.dart';
+import 'package:vid_fetch/core/utils/constants/fonts.dart';
 
 import '../constants/colors.dart';
 

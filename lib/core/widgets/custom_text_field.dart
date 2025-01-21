@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vid_fetch/utils/extentions/extentions.dart';
-
-import '../../utils/constants/colors.dart';
+import 'package:vid_fetch/core/utils/extension/extension.dart';
+import '../utils/constants/colors.dart';
 
 class MyTextFormField extends StatelessWidget {
   const MyTextFormField({
@@ -11,6 +10,7 @@ class MyTextFormField extends StatelessWidget {
     this.focusNode,
     this.pasteLink,
   });
+
   final FormFieldSetter<String>? onSaved;
   final TextEditingController? controller;
   final FocusNode? focusNode;
@@ -28,12 +28,13 @@ class MyTextFormField extends StatelessWidget {
       validator: _youtubeLinkValidator,
       decoration: InputDecoration(
         suffixIcon: IconButton(
-            onPressed: pasteLink,
-            icon: Icon(Icons.paste, color: context.iconTheme.color, size: 20)),
+          onPressed: pasteLink,
+          icon: Icon(Icons.paste, color: context.iconTheme.color, size: 20),
+        ),
         isCollapsed: true,
         isDense: true,
         filled: true,
-        hintText: "Paste Youtube Link",
+        hintText: "Paste YouTube Link",
       ),
     );
   }
@@ -43,6 +44,7 @@ class MyTextFormField extends StatelessWidget {
       return 'Please enter a YouTube link';
     }
 
+    // Regex to validate YouTube links (including Shorts)
     RegExp youtubeRegex = RegExp(
       r'^(https?:\/\/)?(www\.)?(youtube\.com|youtu\.be)\/(watch\?v=|shorts\/|embed\/|v\/|e\/|.+\?v=)?([^&=%\?]{11})',
       caseSensitive: false,
